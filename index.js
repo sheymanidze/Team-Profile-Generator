@@ -1,7 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
-const writeFileAsync = util.promisify(fs.writeFile);
+
 
 //constructor function
 const Employee = require('./lib/Employee.js');
@@ -16,7 +15,7 @@ const writeHTML = require('./generate.js')
 const team = [];
 
 //data we need to fill for html page
-function getInfo() {
+function inputInfo() {
   return inquirer.prompt([
     {
       type: 'input',
@@ -60,7 +59,7 @@ function getInfo() {
       type: 'list',
       name: 'role',
       message: "Please choose Employee's Role",
-      choices: ['Employee', 'Engineer', 'Intern', 'Manager']
+      choices: ['Engineer', 'Intern', 'Manager']
     },
   ])
 
@@ -133,41 +132,34 @@ function getInfo() {
             team.push(addedManager);
             addMember();
           })
-      } else {
-        const addedEmplyee = new Employee(answers.name, answers.id, answers.email, answers.role);
-        team.push(addedEmplyee);
-        addMember();
       }
-
-      function addMember() {
-        return inquirer.prompt([
-          {
-            type: 'confirm',
-            name: 'addMore',
-            message: 'Would you like to add a team memeber?'
-          }
-        ])
-          .then(result => {
-            if (result.addMore === true) {
-              getInfo(team);
-            } else {
-              console.log('team', team);
-              let infoHTML = generateTemplates(team);
-              writeHTML(infoHTML);
-            }
-          })
-      }
-
     })
-};
-getInfo();
 
-//promise
-const init = () => {
-  getInfo()
-    .then(() => writeFileAsync('index.html', generateTemplates()))
-    .then(() => console.log('Successfully wrote to index.html'))
-    .catch((err) => console.error(err));
-};
+  function addMember() {
+    return inquirer.prompt([
+      {
+        type: 'confirm',
+        name: 'addMore',
+        message: 'Would you like to add a team memeber?'
+      }
+    ])
+      .then(result => {
+        if (result.addMore === true) {
+          inputInfo(team);
+        } else {
+          console.log('team', team);
+          let infoHTML = generateTemplates(team);
+          //writeHTML(infoHTML);
+          fs.writeFile('./dist/index.html', infoHTML, (err) =>
+            err ? console.log(err) : console.log('Successfully wrote to index.html')
+          );
+        }
 
-init();
+
+      })
+
+  }
+
+}
+
+inputInfo();
