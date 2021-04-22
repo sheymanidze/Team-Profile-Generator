@@ -8,13 +8,14 @@ const generateHTML = (personInput) =>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Team Profile</title>
-  <link rel="stylesheet" href="../dist/styles.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
- <div class = "container">
-   <header class= "header">
+ 
+  <header class= "header">
     <h1> My Team </h1>
-   </header
+  </header
+  <div class = "container">
     <div class ="main">${roleSection(personInput)}</div>
   </div>
   <script src="https://kit.fontawesome.com/0cb0e7b636.js" crossorigin="anonymous"></script>
@@ -31,10 +32,12 @@ const roleSection = (personInput) => {
   console.log('array', personInput)
 
   let prints = '';
+  //console.log(prints)
 
   for (let i = 0; i < personInput.length; i++)
 
-    if (personInput.role === 'Engineer') {
+    if (personInput[i].role === 'Engineer') {
+
 
       prints +=
 
@@ -50,16 +53,16 @@ const roleSection = (personInput) => {
              <li class = "card-info card-email"> Email: <a    href="mailto: ${personInput[i].email}">
             ${personInput[i].email} </a>
             </li>
-            <li class="card-info card-github">GitHub: <a href = "https://github.com/${personInput[0].gitHub}" target="blank"> ${personInput[0].gitHub}</a></li>
+            <li class="card-info card-github">GitHub: <a href = "https://github.com/${personInput[i].gitHub}" target="blank"> ${personInput[i].gitHub}</a></li>
           </ul>
        </figcaption>
        </figure>
       `;
 
     }
-
-
-}
+  console.log(prints)
+  return prints
+};
 
 
 {/* <figure class ="card">

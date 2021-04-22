@@ -10,11 +10,10 @@ const Manager = require('./lib/Manager.js');
 
 //generate templates
 const generateTemplates = require('./src/template.js')
-const writeHTML = require('./generate.js')
 
 const team = [];
 
-//data we need to fill for html page
+//data we need to fill html page
 function inputInfo() {
   return inquirer.prompt([
     {
@@ -149,9 +148,9 @@ function inputInfo() {
         } else {
           console.log('team', team);
           let infoHTML = generateTemplates(team);
-          //writeHTML(infoHTML);
+          console.log(infoHTML)
           fs.writeFile('./dist/index.html', infoHTML, (err) =>
-            err ? console.log(err) : console.log('Successfully wrote to index.html')
+            err ? console.log(err) : console.log('Your index.html file was successfully created!')
           );
         }
 
