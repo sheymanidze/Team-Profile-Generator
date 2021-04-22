@@ -29,15 +29,60 @@ module.exports = generateHTML;
 
 
 const roleSection = (personInput) => {
-  console.log('array', personInput)
 
   let prints = '';
-  //console.log(prints)
+
+
 
   for (let i = 0; i < personInput.length; i++)
 
     if (personInput[i].role === 'Engineer') {
 
+
+      prints +=
+
+        `
+      <figure class ="card">
+        <div class = "card-header">
+         <h3 class ="name"> ${personInput[i].name}</h3>
+         <h5 class ="role"><i class = "fas fa-glasses"></i> ${personInput[i].role}</h5>
+        </div>
+        <figcaption class="card-body">
+          <ul class = "data">
+             <li class = "card-info card-id"> ID: ${personInput[i].id}</li>
+             <li class = "card-info card-email"> Email: <a    href="mailto: ${personInput[i].email}">
+            ${personInput[i].email} </a>
+            </li>
+            <li class="card-info card-github">GitHub: <a href = "https://github.com/${personInput[i].gitHub}" target="blank"> ${personInput[i].gitHub}</a></li>
+          </ul>
+       </figcaption>
+       </figure>
+      `;
+      return prints
+
+    } else if (personInput[i].role === 'Intern') {
+
+      prints +=
+
+        `
+      <figure class ="card">
+        <div class = "card-header">
+         <h3 class ="name"> ${personInput[i].name}</h3>
+         <h5 class ="role"><i class = "fas fa-user-graduate"></i> ${personInput[i].role}</h5>
+        </div>
+        <figcaption class="card-body">
+          <ul class = "data">
+             <li class = "card-info card-id"> ID: ${personInput[i].id}</li>
+             <li class = "card-info card-email"> Email: <a    href="mailto: ${personInput[i].email}">
+            ${personInput[i].email} </a>
+            </li>
+            <li class="card-info card-school">School Name: ${personInput[i].school}</li>
+          </ul>
+       </figcaption>
+       </figure>
+      `;
+      return prints
+    } else if (personInput[i].role === 'Manager') {
 
       prints +=
 
@@ -53,31 +98,11 @@ const roleSection = (personInput) => {
              <li class = "card-info card-email"> Email: <a    href="mailto: ${personInput[i].email}">
             ${personInput[i].email} </a>
             </li>
-            <li class="card-info card-github">GitHub: <a href = "https://github.com/${personInput[i].gitHub}" target="blank"> ${personInput[i].gitHub}</a></li>
+            <li class="card-info card-manager">Office Number: ${personInput[i].officeNumber}</li>
           </ul>
        </figcaption>
        </figure>
       `;
-
+      return prints
     }
-  console.log(prints)
-  return prints
 };
-
-
-{/* <figure class ="card">
-     <div class = "card-header">
-       <h3 class ="name"> ${personInput[0].name}</h3>
-       <h5 class ="role"><i class = "fas fa-mug-hot"></i> ${personInput[0].role}</h5>
-     </div>
-
-   <figcaption class="card-body">
-     <ul class = "data">
-       <li class = "card-info card-id"> ID: ${personInput[0].id}</li>
-       <li class = "card-info card-email"> Email: <a   href="mailto: ${personInput[0].email}">
-        ${personInput[0].email} </a>
-        </li>
-     
-      </ul>
-    </figcaption>
-   </figure>   */}
