@@ -34,7 +34,7 @@ const roleSection = (personInput) => {
 
 
 
-  for (let i = 0; i < personInput.length; i++)
+  for (let i = 0; i < personInput.length; i++) {
 
     if (personInput[i].role === 'Engineer') {
 
@@ -58,7 +58,6 @@ const roleSection = (personInput) => {
        </figcaption>
        </figure>
       `;
-      return prints
 
     } else if (personInput[i].role === 'Intern') {
 
@@ -81,7 +80,6 @@ const roleSection = (personInput) => {
        </figcaption>
        </figure>
       `;
-      return prints
     } else if (personInput[i].role === 'Manager') {
 
       prints +=
@@ -103,6 +101,7 @@ const roleSection = (personInput) => {
        </figcaption>
        </figure>
       `;
-      return prints
     }
+  }
+  return prints
 };
