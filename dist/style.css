@@ -34,18 +34,19 @@
 .card {
   width: 300px;
   border:white solid 5px;
-  border-radius: 8px;
   outline: 3px solid #76d4c2;
   outline-offset: -2px;
   transition: all 0.5s ease-in-out;
   margin: 1rem;
   background-color: white;
+  box-shadow: inset 0px 0px 15px white, 0 0 20px white;
 }
 
 .card-header {
   width: 100%;
   background-color: #76d4c2;
   padding-bottom: .5rem;
+  
   
 }
 
@@ -70,6 +71,20 @@
   
 }
 
+.card-body {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: solid black 2px;
+  padding: 8px;
+  flex-direction: column;
+
+}
+
 li {
   list-style-type: none;
+}
+
+a {
+  text-decoration: none;
 }
