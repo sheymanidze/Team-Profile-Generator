@@ -31,7 +31,7 @@
   justify-content: center;
 }
 
-.card, .card-header {
+.card-school, .card-header {
   text-transform: capitalize;
   
 }

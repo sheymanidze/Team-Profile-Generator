@@ -32,8 +32,6 @@ const roleSection = (personInput) => {
 
   let prints = '';
 
-
-
   for (let i = 0; i < personInput.length; i++) {
 
     if (personInput[i].role === 'Engineer') {
@@ -50,7 +48,7 @@ const roleSection = (personInput) => {
         <figcaption class="card-body">
           <ul class = "data">
              <li class = "card-info card-id"> ID: ${personInput[i].id}</li>
-             <li class = "card-info card-email"> Email: <a    href="mailto: ${personInput[i].email}">
+             <li class = "card-info card-email"> Email: <a href="mailto: ${personInput[i].email}">
             ${personInput[i].email} </a>
             </li>
             <li class="card-info card-github">GitHub: <a href = "https://github.com/${personInput[i].gitHub}" target="blank"> ${personInput[i].gitHub}</a></li>
@@ -93,8 +91,7 @@ const roleSection = (personInput) => {
         <figcaption class="card-body">
           <ul class = "data">
              <li class = "card-info card-id"> ID: ${personInput[i].id}</li>
-             <li class = "card-info card-email"> Email: <a href="mailto: ${personInput[i].email}">
-            ${personInput[i].email} </a>
+             <li class = "card-info card-email"> Email: <a href="mailto: ${personInput[i].email}"> ${personInput[i].email} </a>
             </li>
             <li class="card-info card-manager"> Office Number:  ${personInput[i].officeNumber}</li>
           </ul>
