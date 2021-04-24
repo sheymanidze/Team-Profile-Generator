@@ -17,7 +17,7 @@
   margin-top: 2rem;
   color: #76d4c2;
   text-shadow:
-   -1px -1px 0 #3c846c,  
+   -1px -1px 0 white,  
     1px -1px 0 #3c846c,
     -1px 1px 0 #3c846c,
      1px 1px 0 #3c846c;
@@ -31,6 +31,10 @@
   justify-content: center;
 }
 
+.card, .card-header {
+  text-transform: capitalize;
+  
+}
 .card {
   width: 300px;
   border:white solid 5px;
@@ -38,6 +42,7 @@
   outline-offset: -2px;
   transition: all 0.5s ease-in-out;
   margin: 1rem;
+  padding: .1rem;
   background-color: white;
   box-shadow: inset 0px 0px 15px white, 0 0 20px white;
 }
@@ -45,7 +50,8 @@
 .card-header {
   width: 100%;
   background-color: #76d4c2;
-  padding-bottom: .5rem;
+  padding: .5rem;
+  border:solid #3c846c 1px;
   
   
 }
@@ -71,14 +77,34 @@
   
 }
 
-.card-body {
+.card-body, .card-info {
   display: flex;
-  justify-content: center;
-  text-align: center;
-  border: solid black 2px;
+
+}
+
+.card-body {
+  
   padding: 8px;
+  margin-top: 1rem;
+  border: solid #3c846c 1px;
   flex-direction: column;
 
+}
+
+.card-info {
+  border-left: solid #3c846c 1px;
+  border-right: solid #3c846c 1px;
+  padding: 7px;
+  margin-left: 3px;
+  
+}
+
+.card-id {
+  border-top:solid #3c846c 1px;
+}
+
+.card-github, .card-school, .card-manager {
+  border-bottom: solid #3c846c 1px;
 }
 
 li {
@@ -87,4 +113,18 @@ li {
 
 a {
   text-decoration: none;
+  margin-left: 5px;
+}
+
+a:link {
+  color: #3c846c;
+}
+
+a:visited {
+  color: #76d4c2;
+}
+.card-info:nth-child(1),
+.card-info:nth-child(2){
+  border-bottom: 0.5px solid #3c846c;
+   
 }

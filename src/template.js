@@ -93,10 +93,10 @@ const roleSection = (personInput) => {
         <figcaption class="card-body">
           <ul class = "data">
              <li class = "card-info card-id"> ID: ${personInput[i].id}</li>
-             <li class = "card-info card-email"> Email: <a    href="mailto: ${personInput[i].email}">
+             <li class = "card-info card-email"> Email: <a href="mailto: ${personInput[i].email}">
             ${personInput[i].email} </a>
             </li>
-            <li class="card-info card-manager">Office Number: ${personInput[i].officeNumber}</li>
+            <li class="card-info card-manager"> Office Number:  ${personInput[i].officeNumber}</li>
           </ul>
        </figcaption>
        </figure>
