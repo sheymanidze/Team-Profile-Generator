@@ -3,9 +3,24 @@
   margin: 0;
   box-sizing: border-box;
 }
-
-.header, .title {
+ body {
+   background-image: url("../images/1.png");
+   background-size: cover;
+   background-position: center;
+ }
+.header {
   text-align: center;
+  font-size: 40px;
+}
+
+.header {
+  margin-top: 2rem;
+  color: #76d4c2;
+  text-shadow:
+   -1px -1px 0 #3c846c,  
+    1px -1px 0 #3c846c,
+    -1px 1px 0 #3c846c,
+     1px 1px 0 #3c846c;
 }
 .main{
   width: 100%;
@@ -16,9 +31,33 @@
   justify-content: center;
 }
 
+.card {
+  width: 300px;
+  border:white solid 5px;
+  border-radius: 8px;
+  outline: 3px solid #76d4c2;
+  outline-offset: -2px;
+  transition: all 0.5s ease-in-out;
+  margin: 1rem;
+  background-color: white;
+}
+
 .card-header {
   width: 100%;
-  background-color: rgb(176, 238, 174);
+  background-color: #76d4c2;
+  padding-bottom: .5rem;
+  
+}
+
+.name, .role {
+  margin-bottom: .5rem;
+  margin-left: .5rem;
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
 }
 
 .name {
@@ -29,4 +68,8 @@
 .role {
   font-size: 25px;
   
+}
+
+li {
+  list-style-type: none;
 }
