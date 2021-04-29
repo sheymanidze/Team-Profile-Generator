@@ -1,5 +1,5 @@
 const Engineer = require('../lib/Engineer.js')
-const testEngineer = new Engineer('John', 1, 'john@gmail.com', 'engineer')
+const testEngineer = new Engineer('John', 1, 'john@gmail.com', 'engineer', 'gitHub')
 
 test('name as entered', () => {
   expect(testEngineer.name).toEqual(expect.any(String))

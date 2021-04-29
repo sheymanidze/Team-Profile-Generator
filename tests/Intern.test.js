@@ -1,5 +1,5 @@
 const Intern = require('../lib/Intern.js')
-const testIntern = new Intern('John', 1, 'john@gmail.com', 'intern')
+const testIntern = new Intern('John', 1, 'john@gmail.com', 'intern', 'school')
 
 test('name as entered', () => {
   expect(testIntern.name).toEqual(expect.any(String))

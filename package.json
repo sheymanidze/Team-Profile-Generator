@@ -5,7 +5,7 @@
   "main": "index.js",
   "directories": {
     "lib": "lib",
-    "test": "jest"
+    "test": "tests"
   },
   "dependencies": {
     "inquirer": "^8.0.0",
@@ -13,7 +13,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node_modules/.bin/wdio ./wdio.conf.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
