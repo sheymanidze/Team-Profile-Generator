@@ -142,9 +142,9 @@ function inputInfo() {
         if (result.addMore === true) {
           inputInfo(team);
         } else {
-          console.log('team', team);
+          //console.log('team', team);
           let infoHTML = generateTemplates(team);
-          console.log(infoHTML)
+          //console.log(infoHTML)
           fs.writeFile('./dist/index.html', infoHTML, (err) =>
             err ? console.log(err) : console.log('Your index.html file was successfully created!')
           );
