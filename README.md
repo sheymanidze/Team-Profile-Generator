@@ -26,6 +26,43 @@
 
  # Screenshots
 
+   Test Pass
+
+   ![pass](/images/testpass.png)
+
+   Test Failed 
+
+   Number was changed to a letter to check if test fail
+
+   ![failed](/images/testfailed.png)
+
+   
+   Questions example
+    
+   Choose role
+
+   ![role](/images/role.png)
+
+   Add more members Y/N
+
+   ![y/n](images/y-n.png)
+
+   Questions based on different roles
+
+   ![all questions](/images/q-and-roles.png)
+
+   Adding is finished
+
+   ![html generated](/images/html-generated.png)
+
+   Team members page example
+
+   ![main page](/images/main-page.png)
+
+   Clicking on email
+
+   ![email](/images/email.png)
+
 
 
  # Application Code
@@ -35,4 +72,4 @@
 
 # Comments
 
-  More questions regarding team members can be added in order to have fuller profiles. Links for the parts that team members are working on can be added in order to have quick access to their work. Design can be adjusted based on the companies’ colors. More tests can be added that include more specifications.
+  More questions regarding team members can be added in order to have fuller profiles. Links for the parts that team members are working on can be added in order to have quick access to their work. More restictions and if statement will be added that will lead to more tests will be applied. Design can be adjusted based on the companies’ colors. More tests can be added that include more specifications.

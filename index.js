@@ -81,8 +81,6 @@ function inputInfo() {
           }
         ])
           .then(reply => {
-            console.log(reply.gitHub)
-
             const addedEngineer = new Engineer(answers.name, answers.id, answers.email, answers.role, reply.gitHub)
             team.push(addedEngineer);
             addMember();
@@ -104,7 +102,6 @@ function inputInfo() {
           }
         ])
           .then(reply => {
-            console.log(reply.school)
             const addedIntern = new Intern(answers.name, answers.id, answers.email, answers.role, reply.school);
             team.push(addedIntern);
             addMember();
@@ -126,7 +123,6 @@ function inputInfo() {
           }
         ])
           .then(reply => {
-            console.log(reply.officeNumber)
             const addedManager = new Manager(answers.name, answers.id, answers.email, answers.role, reply.officeNumber);
             team.push(addedManager);
             addMember();
