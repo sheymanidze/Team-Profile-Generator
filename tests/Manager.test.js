@@ -1,6 +1,6 @@
 const Manager = require('../lib/Manager.js')
 const testManager = new Manager('John', 1, 'john@gmail.com', 'manager', 1111111111)
-console.log(testManager)
+
 test('name as entered', () => {
   expect(testManager.name).toEqual(expect.any(String))
   expect(testManager.name.length).toBeGreaterThan(2)
